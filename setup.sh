@@ -1,6 +1,7 @@
 # add fonsi
 
 adduser --disabled-password --gecos "" fons
+echo fons:fons | chpasswd # yes thats my password but dont tell anyone please xoxo fonsi
 usermod -aG sudo fons
 
 mkdir /home/fons/.ssh

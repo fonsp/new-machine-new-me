@@ -14,7 +14,7 @@ wget https://julialang-s3.julialang.org/bin/linux/x64/1.5/$(echo JULIA_NAME)-lin
 tar -xvzf $JULIA_NAME-linux-x86_64.tar.gz
 rm $JULIA_NAME-linux-x86_64.tar.gz
 
-ln -s /home/fons/$JULIA_NAME/bin/julia /usr/bin/julia
+sudo ln -s /home/fons/$JULIA_NAME/bin/julia /usr/bin/julia
 
 julia --version
 
