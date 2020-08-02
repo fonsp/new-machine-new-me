@@ -11,8 +11,9 @@ chown -R fons:fons /home/fons/.ssh
 chmod 700 /home/fons/.ssh
 chmod 600 /home/fons/.ssh/authorized_keys
 
-chown -R fons:fons ./setupfonsi.sh
-chmod a+rwx ./setupfonsi.sh
+cp ./setupfonsi.sh /home/fons/setupfonsi.sh
+chown -R fons:fons /home/fons/setupfonsi.sh
+chmod a+rwx /home/fons/setupfonsi.sh
 
 echo "Now do"
 echo "sh ./setupfonsi.sh"
