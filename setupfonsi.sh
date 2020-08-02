@@ -8,7 +8,7 @@ touch .hushlogin
 
 cd ~
 
-JULIA_NAME=julia-1.5.0-rc1
+JULIA_NAME=julia-1.5.0-rc2
 
 wget https://julialang-s3.julialang.org/bin/linux/x64/1.5/$(echo $JULIA_NAME)-linux-x86_64.tar.gz
 tar -xvzf $JULIA_NAME-linux-x86_64.tar.gz
@@ -28,6 +28,7 @@ cd ~
 
 git clone https://github.com/fonsp/Pluto.jl.git
 git clone https://github.com/fonsp/PlutoUI.jl.git
+git clone https://github.com/fonsp/PlutoUtils.jl.git
 
-julia -e "import Pkg; Pkg.develop(path=\"Pluto.jl\"); Pkg.develop(path=\"PlutoUI.jl\"); import Pluto; import PlutoUI"
+julia -e "import Pkg; Pkg.develop(path=\"Pluto.jl\"); Pkg.develop(path=\"PlutoUI.jl\"); Pkg.develop(path=\"PlutoUtils.jl\"); import Pluto; import PlutoUI"
 
