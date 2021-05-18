@@ -8,7 +8,7 @@ touch .hushlogin
 
 cd ~
 
-JULIA_NAME=julia-1.5.0
+JULIA_NAME=julia-1.6.0
 
 wget https://julialang-s3.julialang.org/bin/linux/x64/1.5/$(echo $JULIA_NAME)-linux-x86_64.tar.gz
 tar -xvzf $JULIA_NAME-linux-x86_64.tar.gz
