@@ -24,7 +24,7 @@ echo ""
 echo "Your password is fons"
 echo ""
 
-sudo ln -fs /home/fons/$JULIA_VERSION/bin/julia /usr/bin/julia
+sudo ln -fs /home/fons/julia-$JULIA_VERSION/bin/julia /usr/bin/julia
 
 julia --version
 
