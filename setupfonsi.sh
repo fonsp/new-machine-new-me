@@ -8,17 +8,23 @@ touch .hushlogin
 
 cd ~
 
-JULIA_NAME=julia-1.7.0-rc1
+JULIA_VERSION=1.7.0-rc1
 
-wget https://julialang-s3.julialang.org/bin/linux/x64/1.6/$(echo $JULIA_NAME)-linux-x86_64.tar.gz
-tar -xvzf $JULIA_NAME-linux-x86_64.tar.gz
-rm $JULIA_NAME-linux-x86_64.tar.gz
+JULIA_MAJOR_VERSION="$(echo "$JULIA_VERSION" | awk '{split($0,a,"."); print a[1]}')"
+JULIA_MINOR_VERSION="$(echo "$JULIA_VERSION" | awk '{split($0,a,"."); print a[2]}')"
+JULIA_PATCH_VERSION="$(echo "$JULIA_VERSION" | awk '{split($0,a,"."); print a[3]}')"
+[[ -z "$JULIA_PATCH_VERSION" ]] && JULIA_VERSION="${JULIA_VERSION}.0"
+
+
+wget https://julialang-s3.julialang.org/bin/linux/x64/$(echo $JULIA_MAJOR_VERSION).$(echo $JULIA_MINOR_VERSION)/julia-$(echo $JULIA_VERSION)-linux-x86_64.tar.gz
+tar -xvzf julia-$JULIA_VERSION-linux-x86_64.tar.gz
+rm julia-$JULIA_VERSION-linux-x86_64.tar.gz
 
 echo ""
 echo "Your password is fons"
 echo ""
 
-sudo ln -fs /home/fons/$JULIA_NAME/bin/julia /usr/bin/julia
+sudo ln -fs /home/fons/$JULIA_VERSION/bin/julia /usr/bin/julia
 
 julia --version
 
