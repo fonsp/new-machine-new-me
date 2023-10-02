@@ -8,7 +8,7 @@ touch .hushlogin
 
 cd ~
 
-JULIA_VERSION=1.8.2
+JULIA_VERSION=1.9.3
 
 JULIA_MAJOR_VERSION="$(echo "$JULIA_VERSION" | awk '{split($0,a,"."); print a[1]}')"
 JULIA_MINOR_VERSION="$(echo "$JULIA_VERSION" | awk '{split($0,a,"."); print a[2]}')"
