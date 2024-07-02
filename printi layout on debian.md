@@ -16,4 +16,9 @@ Then create `/etc/keyd/default.conf`
 
 - = ;
 ; = :
+
+[alt]
+
+left = home
+right = end
 ```
